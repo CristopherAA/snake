@@ -51,7 +51,7 @@ initComponents();
 document.addEventListener('keydown', changeDirection);
 
 botones.forEach(boton => {
-    boton.addEventListener('touch', () => {
+    boton.addEventListener('click', () => {
         changeDirection({key: boton.id});
     });
 });
