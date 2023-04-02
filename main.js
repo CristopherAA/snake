@@ -46,6 +46,7 @@ let bestScore = localStorage.getItem("bestScore") || 0;
 let elementBestScore = document.querySelector('#best-score');
 let elementScore = document.querySelector('#actual-score');
 const botones = document.querySelectorAll('.fa-solid');
+let isGameOver = false;
 
 initComponents();
 document.addEventListener('keydown', changeDirection);
@@ -57,11 +58,6 @@ botones.forEach(boton => {
 });
 
 const intervalId = setInterval(handleGame, 100);
-
-
-
-
-
 
 function initComponents(){
     //Inicializa las celdas
@@ -86,7 +82,7 @@ function generateFood(){
     foodY = Math.floor(Math.random() * 20);
 
     for(let e of snake.items){
-        if(foodX == e.x || foodY == e.y){
+        if(foodX == e.x && foodY == e.y){
             generateFood();
         }
     }
@@ -135,7 +131,11 @@ function changeDirection(event){
 
 
 function gameOver(){
-    location.reload();
+    if(!isGameOver){
+        isGameOver = true;
+        alert('Perdiste');
+        location.reload();
+    }    
 }
 
 function handleGameOver(){
