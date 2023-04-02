@@ -71,8 +71,14 @@ h1{
     }
     
     .fa-solid{
-        font-size: 300%;
-        margin: 0.2em 0.6em;
+        font-size: 350%;
+        margin: 0.25em 1em;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+        border-radius: 50%;
+    }
+
+    .fa-solid:active{
+        transform: scale(0.9);
     }
 
 }
