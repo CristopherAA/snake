@@ -66,19 +66,13 @@ h1{
         justify-content: center;
         flex-direction: column;
     }
-
-    .controls-container > i{
-        font-size: 2.5em;
-        margin: 0.5em;
-    }
-
     .juntas{
-        display: flex;
-        
+        display: flex;   
     }
-    .juntas > i{
-        font-size: 2.5em;
-        margin: 0.5em 1.5em;
+    
+    .fa-solid{
+        font-size: 300%;
+        margin: 0.2em 0.6em;
     }
 
 }
